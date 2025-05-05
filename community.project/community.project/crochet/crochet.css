@@ -1,0 +1,101 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF8E4;
+  }
+  
+  /* Header Text Styling */
+  h1 {
+    font-family: "Pattaya", sans-serif;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  
+  h2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 80px;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+  
+  /* Scallop Container with Text Overlay */
+  .scallop-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box; /* Ensures padding doesn't exceed 100% width */
+
+  }
+  
+  .scallop {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Text Overlay Positioned on Top of the Image */
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Title and Description Now Use vw Units to Scale With Image */
+  .title {
+    font-family: "Paytone One", sans-serif;
+    font-size: 10vw;
+    margin: 0;
+  }
+  
+  .description {
+    font-size: 3vw;
+    margin: 10px 0 0;
+  }
+  
+  /* Home Button Styling */
+  .home-button {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    background-color: #d8b4f8; /* light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+  }
+  
+  .home-button:hover {
+    background-color: #9b59b6; /* dark purple */
+  }
+
+  .web1{
+    box-sizing: border-box; /* Ensures padding doesn't exceed 100% width */
+    padding: 20px;
+  }
+  
+.website-description {
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 990px) {
+    
+    .website-description {
+        font-size: 20px;
+    }
+
+    .scallop-wrapper {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}

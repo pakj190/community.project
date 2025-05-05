@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Web Page</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #FFF8E4;
+      overflow-x: hidden;
+    }
+
+    .responsive-container {
+      width: 100vw;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scale-wrapper {
+      width: 1512px;
+      height: auto;
+      transform-origin: top left;
+    }
+
+    @media (max-width: 1512px) {
+      .scale-wrapper {
+        transform: scale(calc(100vw / 1512));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="responsive-container">
+    <div class="scale-wrapper">
+      <!-- Your entire content stays untouched here -->
+      <div style="width: 1512px; height: 2509px; position: relative; background: #FFF8E4; overflow: hidden">
+        <!-- Everything inside remains unchanged -->
+        <img style="width: 1500px; height: 806px; left: 6px; top: -37px; position: absolute" src="https://placehold.co/1500x806" />
+        <div style="width: 1129px; height: 147px; left: 191px; top: 221px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 150px; font-family: Pattaya; font-weight: 400; word-wrap: break-word">Fiber Fellowship</div>
+        <div style="width: 735px; height: 61px; left: 388px; top: 368px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 25px; font-family: Red Hat Display; font-weight: 400; word-wrap: break-word">WHERE THE FIBER ART COMMUNITY CONNECTS</div>
+        <!-- Continue the rest of your content exactly as you have it -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

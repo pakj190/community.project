@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #BD8EC0;
+}
+
+h1 {
+    font-family: "Pattaya", sans-serif;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+h2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 60px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.title {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.description {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.scallop {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.home-button {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    background-color: #d8b4f8; /* light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+  }
+  
+  .home-button:hover {
+    background-color: #9b59b6; /* dark purple */
+  }
