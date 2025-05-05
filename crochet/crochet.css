@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: #FFF8E4;
+    font-family: "Montserrat", sans-serif;
   }
   
   /* Header Text Styling */
@@ -78,7 +79,7 @@ body {
 
   .web1{
     box-sizing: border-box; /* Ensures padding doesn't exceed 100% width */
-    padding: 20px;
+    padding: 40px;
   }
   
 .website-description {
