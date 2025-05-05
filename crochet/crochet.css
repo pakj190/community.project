@@ -89,6 +89,21 @@ body {
     padding: 20px;
 }
 
+.list {
+  font-size: 20px;
+  margin: auto;
+  padding: 20px 90px;;
+  background-color: #BD8EC0;
+  max-width: 1000px;
+}
+.my-tips {
+  font-size: 30px;
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 990px) {
     
     .website-description {
