@@ -28,24 +28,98 @@
   <h2> WORDS FROM THE COMMUNITY:</h2>
   <h2 class="subheader2">"What is your favorite thing about the community?</h2>
 
-  <p class="p1">“I love how customizable and unique each piece is. No matter what you’re making, it’s one of a kind”</p>
-  <p class="p2">“My favorite part is knowing I started with literally a string and turned it into an entire garment.”</p>
-  <p class="p3">“Having a way to calm my anxiety, being able to give meaningful gifts, and having a GREAT community that’s so supportive! (shop: @Artists._.Archive)”</p>
-  <p class="p4">“I like just being able to make stuff! I learned how to knit years ago but I taught myself how to crochet last week.”</p>
-  <p class="p5">“I really love that in a time of fast fashion and consumerism, I can slow down, make the clothes I want, and truly enjoy them.”</p>
-  <p class="p6">“It gives me a chance to just zone out.”</p>
-  <p class="p7">“I love how it can feel very monotonous, but you’re creating a piece of art the whole time!”</p>
-  <p class="p8">“I love that crochet gives me the ability to make literally"</p>
-  <p class="p9">“I love that I can just make something whenever I want! Also, it’s something for me to do to pass time that isn’t doom scrolling.”</p>
-  <p class="p10">“I love that I can make anything I want! A bag, a hat, sweater, pillow, whatever I can imagine.”</p>
-  <p class="p11">“I love being able to truly customize clothes to fit me without any compromises (and in my favorite colors!). I also love all of the people I have met through it, they’re some of the fastest and closest friends I’ve made (mostly through my school’s fiber arts club, which I became VP of as a freshman).”</p>
-  <p class="p12">“I like that I can make cute stuff for my plushies and also it keeps me occupied instead of being anxious at all times.”</p>
-  <p class="p13">“Creating new things and expressing myself through clothes.”</p>
-  <p class="p14">“I just love seeing something start off as just a ball of yarn and come together as a usable item right in my hands.”</p>
-  <p class="p15">“Turning off my brain while I work, and creating a wardrobe made by my own hands.”</p>
-  <p class="p16">“It’s the closest I feel to being able to do magic!”</p>
-  <p class="p17">“Crochet helps me express myself creatively.”</p>
-  <p class="p18">“I like that I get to be off my phone and gift others my finished works. Also, it’s supposed to be good for preventing dementia and Alzheimer’s so that’s def a plus.”</p>
-
+  <div id="quote-container">
+    <p class="quote">“I love how customizable and unique each piece is. No matter what you’re making, it’s one of a kind” (@lazy_crochet)</p>
+    <p class="quote">“My favorite part is knowing I started with literally a string and turned it into an entire garment.” (@leeloohowzee)</p>
+    <p class="quote">“Having a way to calm my anxiety, being able to give meaningful gifts, and having a GREAT community that’s so supportive! (shop: @Artists._.Archive)” (@Double_C)</p>
+    <p class="quote">“I like just being able to make stuff! I learned how to knit years ago but I taught myself how to crochet last week.” (@MelindaRatwithahamster)</p>
+    <p class="quote">“I really love that in a time of fast fashion and consumerism, I can slow down, make the clothes I want, and truly enjoy them.” (@crochetwhilereading)</p>
+    <p class="quote">“It gives me a chance to just zone out.” (@theeyarnboss)</p>
+    <p class="quote">“I love how it can feel very monotonous, but you’re creating a piece of art the whole time!” (@thewillwexchange)</p>
+    <p class="quote">“I love that crochet gives me the ability to make literally" (@addy.crochetss)</p>
+    <p class="quote">“I love that I can just make something whenever I want! Also, it’s something for me to do to pass time that isn’t doom scrolling.” (@natsuandnhi)</p>
+    <p class="quote">“I love that I can make anything I want! A bag, a hat, sweater, pillow, whatever I can imagine.” (@OddMomGroup)</p>
+    <p class="quote">“I love being able to truly customize clothes to fit me without any compromises (and in my favorite colors!). I also love all of the people I have met through it...” (@littleminigenius)</p>
+    <p class="quote">“I like that I can make cute stuff for my plushies and also it keeps me occupied instead of being anxious at all times.” (@cosmicdoll)</p>
+    <p class="quote">“Creating new things and expressing myself through clothes.” (@AxelFxsh)</p>
+    <p class="quote">“I just love seeing something start off as just a ball of yarn and come together as a usable item right in my hands.” (@opalesced)</p>
+    <p class="quote">“Turning off my brain while I work, and creating a wardrobe made by my own hands.” (@citybirdmakes)</p>
+    <p class="quote">“It’s the closest I feel to being able to do magic!” (@portiabturner)</p>
+    <p class="quote">“Crochet helps me express myself creatively.” (@cristianna49)</p>
+    <p class="quote">“I like that I get to be off my phone and gift others my finished works. Also, it’s supposed to be good for preventing dementia and Alzheimer’s so that’s def a plus.” (@milly_hehehaha)</p>
+  </div>
+  
 </body>
 </html>
+
+<script>
+  const quotes = document.querySelectorAll('.quote');
+  const activeQuotes = []; // Track active quotes with their positions and times
+  let zIndexCounter = 1; // Start z-index counter for layering quotes
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  function getRandomPosition() {
+    let position;
+    let isOverlap = true;
+
+    // Keep generating random positions until there's no overlap
+    while (isOverlap) {
+      const x = getRandomInt(0, window.innerWidth - 320);
+      const y = getRandomInt(0, window.innerHeight - 100);
+      position = { x, y };
+
+      // Check if the position is too close to any active quote
+      isOverlap = activeQuotes.some(quote => {
+        const distX = Math.abs(quote.x - position.x);
+        const distY = Math.abs(quote.y - position.y);
+
+        return distX < 100 && distY < 100; // Check within 100px range
+      });
+    }
+
+    return position;
+  }
+
+  function showRandomQuote() {
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    // Get a random position that doesn't overlap
+    const { x, y } = getRandomPosition();
+
+    // Set the position of the quote
+    quote.style.left = `${x}px`;
+    quote.style.top = `${y}px`;
+    quote.style.opacity = 1;  // Start with full opacity for the fade-in effect
+    quote.style.zIndex = zIndexCounter; // Set z-index to layer on top
+
+    // Track the quote's position and expiration time
+    const expirationTime = Date.now() + 15000; // Quote disappears after 15 seconds
+    activeQuotes.push({ quote, x, y, expirationTime, zIndex: zIndexCounter });
+
+    // Increment the zIndex counter for the next quote
+    zIndexCounter++;
+
+    // Wait for 8 seconds before fading out the quote
+    setTimeout(() => {
+      quote.style.opacity = 0; // Start fading out
+      // Remove from activeQuotes after it fades out
+      const index = activeQuotes.findIndex(q => q.quote === quote);
+      if (index !== -1) {
+        activeQuotes.splice(index, 1);
+      }
+    }, 8000); // Stay visible for 8 seconds
+
+    // Optional: If you want to show them faster, you could reduce the fade-in time.
+  }
+
+  function startQuoteLoop() {
+    setInterval(() => {
+      showRandomQuote();
+    }, getRandomInt(800, 1500)); // Random interval for a new quote (every 0.8–1.5 seconds)
+  }
+
+  window.onload = startQuoteLoop;
+</script>

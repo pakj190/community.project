@@ -1,4 +1,6 @@
-/* Default styles */
+/* =====================
+   Default Styles
+===================== */
 body {
     margin: 0;
     padding: 0;
@@ -19,40 +21,24 @@ h2 {
     margin-top: 0px;
 }
 
-.subheader2 {
-    font-family: "Paytone One", sans-serif;
-    font-size: 30px;
-    color: purple;
-}
-
-.community-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 20px;
-    row-gap: 0px;
-    max-width: 800px;
-    margin: auto;
-}
-
+/* =====================
+   Typography Classes
+===================== */
 .word {
     margin: 0;
     font-family: "Pattaya", sans-serif;
     font-size: 70px;
 }
 
-.community-link {
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    color: black;
+.subheader2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 30px;
+    color: purple;
 }
 
-.community-link:hover .word {
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-}
-
+/* =====================
+   Hero Section
+===================== */
 .hero {
     width: 100%;
     height: 100vh;
@@ -103,7 +89,65 @@ h2 {
     margin-top: 20px;
 }
 
-/* Media queries for responsive design */
+/* =====================
+   Community Section
+===================== */
+.community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    row-gap: 0px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.community-link {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+}
+
+.community-link:hover .word {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+/* =====================
+   Paragraph Styling
+===================== */
+.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+.p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+    font-size: 30px;
+}
+
+/* =====================
+   Utility Buttons
+===================== */
+.home-button {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    background-color: #d8b4f8; /* light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background-color: #9b59b6; /* dark purple */
+}
+
+/* =====================
+   Responsive Design
+===================== */
 
 /* Tablets and small screens */
 @media (max-width: 1200px) {
@@ -120,13 +164,14 @@ h2 {
         color: lime;
     }
 
-    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
+    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+    .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
         font-size: 20px;
         max-width: 1000px;
         text-align: center;
         margin-left: 10px;
         padding: 20px;
-      }
+    }
 }
 
 /* Smaller tablets and large phones */
@@ -151,13 +196,14 @@ h2 {
         margin-bottom: 10px;
     }
 
-    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
+    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+    .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
         font-size: 20px;
         max-width: 900px;
         text-align: center;
         padding: 20px;
         margin-left: 10px;
-      }
+    }
 }
 
 /* Portrait Mobile and Small Tablets */
@@ -196,12 +242,14 @@ h2 {
     .subheader2 {
         font-size: 18px;
     }
-    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
+
+    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+    .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
         font-size: 20px;
         max-width: 600px;
         text-align: center;
         padding: 20px;
-      }
+    }
 }
 
 /* Portrait Mobile */
@@ -233,11 +281,13 @@ h2 {
     .subheader2 {
         font-size: 20px;
     }
-    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
+
+    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+    .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
         font-size: 20px;
         max-width: 590px;
         text-align: center;
-      }
+    }
 }
 
 /* Mobile Screens (Small Phones) */
@@ -274,40 +324,30 @@ h2 {
         font-size: 18px;
     }
 
-    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
+    .p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10,
+    .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
         margin-left: 20px;
         font-size: 20px;
         max-width: 450px;
-      }
-      
+    }
 }
 
+#quote-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
 
-
-
-.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18 {
-    margin-bottom: 5rem;
-    margin-top: 10rem;
-    font-size: 30px;
-  }
-  
-
-  
-  .home-button {
-    position: sticky;
-    top: 20px;
-    right: 20px;
-    float: right;
-    background-color: #d8b4f8; /* light purple */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    z-index: 1000;
-  }
-  
-  .home-button:hover {
-    background-color: #9b59b6; /* dark purple */
+.quote {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Fade effect with a smooth transition */
+    font-size: 24px;
+    max-width: 300px;
+    padding: 10px 15px;
+    background: rgba(230, 190, 255, 1); /* Light purple background */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
   }
   
