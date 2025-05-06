@@ -178,6 +178,23 @@ h2 {
     transform: scale(1.03); /* slight zoom for effect */
   }
   
+
+  .interaction-button {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .interaction-img {
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .interaction-img:hover {
+    transform: scale(1.05);
+  }
+  
   
 
 @media (max-width: 1200px) {
@@ -218,6 +235,7 @@ h2 {
     .word:nth-child(3) {
         font-size: 50px;
     }
+    
 
     .resource-container {
         flex-direction: column;
@@ -239,7 +257,7 @@ h2 {
 
 @media (max-width: 990px) {
     .hero {
-        height: 80vh;
+        height: 90vh;
     }
 
     .top-text {
@@ -295,11 +313,13 @@ h2 {
         max-width: 400px;
         margin-top: 40px;
       }
-    
-      .resource-grid {
-        padding: 20px;
+
+      .word:nth-child(2),
+      .word:nth-child(3) {
+          font-size: 50px;
+          margin-bottom: 0px;
       }
-}
+  }
 
 @media (max-width: 768px) {
     .hero {
@@ -362,6 +382,20 @@ h2 {
         margin-left: auto;
         margin-right: 60px;
     }
+
+    .interaction-img {
+        max-width: 300px; /* or adjust as needed */
+      }
+
+      .resource-grid {
+        padding: 20px;
+        grid-template-columns: 1fr; /* change from 2 columns to 1 */
+        justify-items: center; /* center items horizontally */
+      }
+    
+      .resource-grid img {
+        width: 250px; /* optional: scale down for smaller screens */
+      }
 }
 
 @media (max-width: 600px) {
@@ -435,7 +469,7 @@ h2 {
     }
 
     .button img {
-        width: 60px;
+        width: 90px;
         height: auto;
         margin-top: 80px;
     }

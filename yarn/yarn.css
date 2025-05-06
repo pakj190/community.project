@@ -1,0 +1,150 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF8E4;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* Header Text Styling */
+  h1 {
+    font-family: "Pattaya", sans-serif;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  
+  h2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 80px;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+  
+  /* Scallop Container with Text Overlay */
+  .scallop-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box; /* Ensures padding doesn't exceed 100% width */
+  
+  }
+  
+  .scallop {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Text Overlay Positioned on Top of the Image */
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Title and Description Now Use vw Units to Scale With Image */
+  .title {
+    font-family: "Paytone One", sans-serif;
+    font-size: 8vw;
+    margin: 0;
+    letter-spacing: 8px;
+  }
+  
+  .description {
+    font-size: 3vw;
+    margin: 10px 0 0;
+  }
+  
+  /* Home Button Styling */
+  .home-button {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    background-color: #d8b4f8; /* light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+  }
+  
+  .home-button:hover {
+    background-color: #9b59b6; /* dark purple */
+  }
+  
+  .web1{
+    box-sizing: border-box; /* Ensures padding doesn't exceed 100% width */
+    padding: 40px;
+  }
+  
+  .website-description {
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .list {
+  font-size: 20px;
+  margin: auto;
+  padding: 20px 90px;;
+  background-color: #BD8EC0;
+  max-width: 1000px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  line-height: 40px;
+  }
+  
+  .my-tips {
+  font-size: 30px;
+  margin: auto;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  }
+  
+  .knit-image {
+    width: 100%;
+    max-width: 400px; /* or adjust to fit your layout */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .knit-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .tip-video {
+    text-align: center; /* This centers inline-block elements like iframes */
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 25px;
+  }
+  
+  .tip-video:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  
+  @media (max-width: 990px) {
+    
+    .website-description {
+        font-size: 20px;
+    }
+  
+    .scallop-wrapper {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+  }

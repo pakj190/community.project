@@ -135,7 +135,19 @@ margin-top: 20px;
   transform: scale(1.05);
 }
 
+.website-image {
+  width: 100%;
+  max-width: 800px; /* or adjust to fit your layout */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
 
+.website-image:hover {
+  transform: scale(1.05);
+}
 
 @media (max-width: 990px) {
   
