@@ -1,0 +1,110 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: #BD8EC0;
+    font-family: 'Pattaya', sans-serif;
+}
+
+/* Title and Description */
+h1 {
+    font-family: "Pattaya", sans-serif;
+    font-size: 80px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+h2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 60px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.title {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.description {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+/* Home Button */
+.home-button {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    background-color: #d8b4f8; /* light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background-color: #9b59b6; /* dark purple */
+}
+
+/* 3x2 Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between images */
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-item {
+    text-align: center;
+    position: relative;
+    padding-bottom: 100%; /* Ensure square aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff; /* Optional: Background color if image is missing */
+}
+
+.photo-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the area and doesn't distort */
+}
+
+.instagram-user {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
